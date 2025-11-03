@@ -1,0 +1,466 @@
+/* ==============================
+   styles.css — Tema: Preto & Ciano Neon
+   Futurista Tech — Classes e comentários em pt-BR
+   ============================== */
+
+/* ====== Variáveis globais ====== */
+:root{
+  --bg: #0b0b0d;
+  --surface: #0f1113;
+  --muted: #9aa3ad;
+  --neon: #00e5ff; /* ciano neon */
+  --glass: rgba(255,255,255,0.03);
+  --radius: 14px;
+  --container: 1150px;
+  --shadow-neon: 0 8px 40px rgba(0,229,255,0.08);
+}
+
+/* ====== Reset / Base ====== */
+*{box-sizing:border-box}
+html, body{height:100%}
+body{
+  margin:0;
+  font-family: 'Inter', system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial;
+  background:
+    radial-gradient(1000px 450px at 10% 10%, rgba(0,229,255,0.03), transparent),
+    radial-gradient(700px 300px at 90% 90%, rgba(124,120,255,0.02), transparent),
+    var(--bg);
+  color:#e6eef2;
+  -webkit-font-smoothing:antialiased;
+}
+
+/* ====== Container ====== */
+.container{max-width:var(--container);margin:0 auto;padding:0 20px}
+
+/* ================= HEADER ================= */
+.header{
+  position: sticky;
+  top: 0;
+  z-index: 60;
+  background: linear-gradient(180deg, rgba(255,255,255,0.02), transparent);
+  backdrop-filter: blur(6px);
+  border-bottom: 1px solid rgba(255,255,255,0.02);
+}
+
+.nav{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 18px 0;
+  position: relative;
+}
+
+/* ====== Logo Central ====== */
+.logo{
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.logo img{
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
+
+/* ====== Menu Principal ====== */
+.nav-list{
+  display: flex;
+  gap: 18px;
+  align-items: center;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.nav-list a{
+  color: var(--muted);
+  text-decoration: none;
+  padding: 8px;
+}
+
+.btn-cta{
+  background: linear-gradient(90deg,var(--neon),#5de7ff);
+  color: #001;
+  padding: 8px 14px;
+  border-radius: 10px;
+  font-weight: 600;
+}
+
+/* ====== Botão Menu Mobile ====== */
+.nav-toggle{
+  display: none;
+  background:none;
+  border:0;
+  color: var(--neon);
+  font-size: 22px;
+  cursor:pointer;
+}
+
+/* ================= HERO ================= */
+.hero{padding:80px 0 60px;position:relative;overflow:hidden}
+
+.hero-shapes{position:absolute;inset:0;pointer-events:none;opacity:0.12}
+.hero-shapes .shape{position:absolute;border-radius:50%}
+.hero-shapes .s1{width:360px;height:360px;right:-80px;top:-60px;background:linear-gradient(90deg, rgba(0,229,255,0.12), transparent);filter:blur(40px)}
+.hero-shapes .s2{width:220px;height:220px;left:-60px;bottom:-40px;background:linear-gradient(90deg, rgba(124,120,255,0.06), transparent);filter:blur(36px)}
+.hero-shapes .s3{width:140px;height:140px;right:18%;top:40%;background:linear-gradient(90deg, rgba(0,229,255,0.06), transparent);filter:blur(18px)}
+
+.hero-content{display:grid;grid-template-columns:1fr 380px;gap:28px;align-items:center}
+.hero-text h1{font-size:34px;line-height:1.04;margin:0 0 12px}
+.muted{color:var(--muted)}
+.neon{color:var(--neon);text-shadow:0 6px 28px rgba(0,229,255,0.12)}
+.hero-actions{display:flex;gap:12px;margin-top:10px}
+
+.btn-primary{
+  background:linear-gradient(90deg, rgba(0,229,255,0.12), rgba(0,229,255,0.06));
+  border:1px solid rgba(0,229,255,0.14);
+  padding:12px 18px;
+  border-radius:12px;
+  color:var(--neon);
+  font-weight:600;
+  text-decoration:none;
+  display:inline-block;
+}
+.btn-secondary{
+  background:transparent;
+  border:1px solid rgba(255,255,255,0.04);
+  padding:12px 18px;
+  border-radius:12px;
+  color:var(--muted);
+  text-decoration:none;
+}
+.btn-primary:hover, .btn-secondary:hover{
+  transform:translateY(-4px);
+  transition:all .18s ease;
+}
+
+/* ================= HERO CARD ================= */
+.hero-card{
+  backdrop-filter:blur(8px);
+  background:linear-gradient(180deg, rgba(255,255,255,0.02), rgba(255,255,255,0.015));
+  border-radius:16px;
+  padding:22px;
+  box-shadow:var(--shadow-neon);
+  border:1px solid rgba(0,229,255,0.06);
+}
+.card-inner h3{margin:0 0 8px}
+.card-cta{
+  margin-top:12px;
+  background:linear-gradient(90deg,var(--neon), rgba(0,229,255,0.6));
+  padding:8px;
+  border-radius:10px;
+  color:#001;
+  font-weight:700;
+  display:inline-block;
+}
+
+/* ================= SEÇÕES ================= */
+/* Serviços */
+.section-title{text-align:center;margin:36px 0 18px;font-size:22px}
+.grid-servicos{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
+.servico{
+  background:var(--surface);
+  padding:20px;
+  border-radius:12px;
+  border:1px solid rgba(255,255,255,0.02);
+  box-shadow:0 10px 30px rgba(2,6,23,0.6);
+  text-align:center;
+}
+.servico .icon{font-size:28px;margin-bottom:8px}
+
+/* Sobre */
+.sobre{padding:40px 0}
+.sobre-grid{display:grid;grid-template-columns:1fr 420px;gap:28px;align-items:center}
+.mockup{
+  position:relative;
+  height:260px;
+  border-radius:18px;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  background:linear-gradient(180deg, rgba(255,255,255,0.01), rgba(255,255,255,0.005));
+  border:1px solid rgba(255,255,255,0.02);
+}
+.mockup-screen{
+  width:80%;
+  height:64%;
+  background:linear-gradient(180deg, rgba(255,255,255,0.02), rgba(255,255,255,0.01));
+  border-radius:12px;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  border:1px solid rgba(0,229,255,0.06);
+}
+.mockup-glow{
+  position:absolute;
+  inset:auto auto 8px 20px;
+  width:140px;
+  height:60px;
+  background:linear-gradient(90deg, rgba(0,229,255,0.08), rgba(0,229,255,0.02));
+  filter:blur(18px);
+  transform:rotate(-15deg);
+  border-radius:10px;
+}
+
+/* Depoimentos */
+.depoimentos{padding:30px 0}
+.cards-depoimentos{display:grid;grid-template-columns:repeat(2,1fr);gap:14px}
+.depoimento{
+  background:var(--glass);
+  padding:20px;
+  border-radius:12px;
+  border-left:3px solid var(--neon);
+  color:var(--muted);
+}
+.depoimento footer{margin-top:10px;color:#b7c4cc;font-size:13px}
+
+/* CTA */
+.cta{
+  margin:40px 0;
+  padding:34px;
+  border-radius:14px;
+  background:linear-gradient(180deg, rgba(0,229,255,0.02), transparent);
+  border:1px solid rgba(0,229,255,0.04);
+}
+.form-cta{
+  display:grid;
+  grid-template-columns:1fr 1fr;
+  gap:12px;
+  margin-top:12px;
+}
+.form-cta input, .form-cta textarea{
+  background:transparent;
+  border:1px solid rgba(255,255,255,0.04);
+  padding:12px;
+  border-radius:10px;
+  color:#eaf6fb;
+}
+.form-cta button{
+  grid-column:span 2;
+  padding:12px;
+  border-radius:10px;
+  border:0;
+  background:linear-gradient(90deg,var(--neon), rgba(93,231,255,0.6));
+  color:#001;
+  font-weight:700;
+}
+
+/* Footer */
+.footer{padding:28px 0;border-top:1px solid rgba(255,255,255,0.02)}
+.footer-grid{display:flex;justify-content:space-between;align-items:flex-start}
+.footer a{color:var(--muted);text-decoration:none}
+.copyright{margin-top:12px;text-align:center;color:#7f8b93;padding-bottom:18px}
+
+/* ================= RESPONSIVO ================= */
+@media(max-width:920px){
+  .hero-content{grid-template-columns:1fr}
+  .sobre-grid{grid-template-columns:1fr}
+  .grid-servicos{grid-template-columns:1fr}
+  .cards-depoimentos{grid-template-columns:1fr}
+  .form-cta{grid-template-columns:1fr}
+}
+
+@media(max-width:640px){
+  .nav-list{
+    display:none;
+    position:absolute;
+    right:20px;
+    top:64px;
+    background:var(--surface);
+    border-radius:12px;
+    border:1px solid rgba(255,255,255,0.02);
+    padding:14px;
+    flex-direction:column;
+    min-width:180px;
+  }
+  .nav-list.open{display:flex}
+  .nav-toggle{display:block;background:none;border:0;color:var(--neon);font-size:22px;cursor:pointer}
+}
+
+/* ================= ANIMAÇÕES EXTRAS ================= */
+
+/* FLOAT */
+@keyframes float {
+  0% { transform: translateY(0); }
+  50% { transform: translateY(-10px); }
+  100% { transform: translateY(0); }
+}
+.float{animation:float 6s ease-in-out infinite}
+
+/* GLOW PULSANTE NEON */
+@keyframes neonPulse {
+  0%   { box-shadow: 0 0 8px rgba(0,229,255,0.18), 0 0 14px rgba(0,229,255,0.12); }
+  50%  { box-shadow: 0 0 18px rgba(0,229,255,0.28), 0 0 40px rgba(0,229,255,0.18); transform: translateY(-2px); }
+  100% { box-shadow: 0 0 8px rgba(0,229,255,0.18), 0 0 14px rgba(0,229,255,0.12); transform: translateY(0); }
+}
+.glow{animation:neonPulse 2.8s ease-in-out infinite}
+
+/* SCROLL REVEAL */
+.reveal{
+  opacity:0;
+  transform:translateY(18px);
+  transition:all .7s cubic-bezier(.2,.9,.2,1);
+}
+.reveal.active{
+  opacity:1;
+  transform:translateY(0);
+}
+
+/* Pequeno efeito hover nos cards */
+.servico:hover, .hero-card:hover{
+  transform:translateY(-6px);
+  transition:transform .18s ease;
+}
+
+/* Logo central com dropdown */
+.logo-dropdown {
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+
+.logo-dropdown .logo {
+  display: block;
+  position: relative;
+  background: rgba(0,0,0,0.25); /* fundo levemente transparente */
+  padding: 6px 12px;
+  border-radius: 10px;
+  transition: background 0.2s ease;
+}
+
+.logo-dropdown .logo:hover {
+  background: rgba(0,0,0,0.4);
+}
+
+.logo-dropdown .dropdown {
+  display: none;
+  position: absolute;
+  top: 100%;
+  left: 50%;
+  transform: translateX(-50%);
+  background: rgba(15,17,19,0.95); /* fundo menu dropdown */
+  border-radius: 10px;
+  padding: 12px 0;
+  min-width: 180px;
+  box-shadow: 0 8px 28px rgba(0,229,255,0.25);
+  list-style: none;
+  text-align: center;
+  z-index: 50;
+}
+
+.logo-dropdown .dropdown li {
+  margin: 0;
+}
+
+.logo-dropdown .dropdown li a {
+  display: block;
+  padding: 8px 20px;
+  color: var(--muted);
+  text-decoration: none;
+  font-weight: 500;
+  transition: color 0.2s ease;
+}
+
+.logo-dropdown .dropdown li a:hover {
+  color: var(--neon);
+}
+
+/* Mostrar dropdown ao passar mouse na logo */
+.logo-dropdown:hover .dropdown {
+  display: block;
+}
+
+/* Botão CTA à direita */
+.nav .btn-cta {
+  margin-left: auto;
+}
+
+/* Cards de serviços com background image e glow neon */
+.servico {
+  position: relative;
+  padding: 20px;
+  border-radius: 12px;
+  overflow: hidden;
+  color: #fff;
+  text-align: center;
+  cursor: pointer;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  background-size: cover;
+  background-position: center;
+  border: 1px solid rgba(0,229,255,0.15);
+}
+
+/* Overlay escuro para legibilidade */
+.servico::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: rgba(0,0,0,0.45);
+  border-radius: 12px;
+  transition: background 0.3s ease;
+  z-index: 0;
+}
+
+/* Conteúdo acima do overlay */
+.servico > * {
+  position: relative;
+  z-index: 1;
+}
+
+/* Efeito glow neon ao passar o mouse */
+.servico:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 0 24px rgba(0,229,255,0.6), 0 0 48px rgba(0,229,255,0.4), 0 0 72px rgba(0,229,255,0.2);
+}
+
+.servico:hover::before {
+  background: rgba(0,0,0,0.25); /* overlay mais claro ao hover */
+}
+
+/* Fundo específico para cada card */
+.servico.frontend {
+  background-image: url('img/frontend.jpg');
+}
+
+.servico.sistemas {
+  background-image: url('img/sistemas.jpg');
+}
+
+.servico.uiux {
+  background-image: url('img/uiux.jpg');
+}
+
+/* Mockup da tela com imagem de fundo */
+.mockup-screen {
+  width: 80%;
+  height: 64%;
+  border-radius: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid rgba(0,229,255,0.06);
+
+  /* Imagem de fundo */
+  background-image: url('img/dash.jpg'); /* substitua pelo nome da sua imagem */
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+
+  /* Overlay leve para glow */
+  position: relative;
+  overflow: hidden;
+}
+
+.mockup-screen::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: rgba(0,229,255,0.12); /* leve brilho ciano */
+  mix-blend-mode: overlay;
+  pointer-events: none;
+  border-radius: 12px;
+}

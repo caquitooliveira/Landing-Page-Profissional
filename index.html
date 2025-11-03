@@ -1,0 +1,188 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>NeonCraft — Agência de Desenvolvimento Web</title>
+
+  <!-- Favicon -->
+  <link rel="icon" type="image/png" href="favicon.png">
+
+  <!-- Estilos -->
+  <link rel="stylesheet" href="styles.css">
+
+  <!-- Fontes -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800&display=swap" rel="stylesheet">
+</head>
+<body>
+
+  <!-- ================= HEADER ================= -->
+<header class="header">
+  <nav class="nav container">
+
+    <!-- Logo central com dropdown -->
+    <div class="logo-dropdown">
+      <a href="#" class="logo">
+        <img src="logo-neoncraft.svg" alt="NeonCraft Logo" width="260" height="70">
+      </a>
+      <ul class="dropdown">
+        <li><a href="#servicos">Serviços</a></li>
+        <li><a href="#sobre">Sobre</a></li>
+        <li><a href="#depoimentos">Depoimentos</a></li>
+        <li><a href="#contato">Contato</a></li>
+      </ul>
+    </div>
+
+    <!-- Botão Solicitar Orçamento -->
+    <a class="btn-cta" href="#contato">Solicitar Orçamento</a>
+
+    <!-- Botão menu mobile -->
+    <button class="nav-toggle" aria-label="Abrir menu">☰</button>
+
+  </nav>
+</header>
+
+
+  <main>
+
+    <!-- ================= HERO ================= -->
+    <section class="hero">
+      <!-- Shapes decorativos -->
+      <div class="hero-shapes" aria-hidden="true">
+        <div class="shape s1"></div>
+        <div class="shape s2"></div>
+        <div class="shape s3"></div>
+      </div>
+
+      <div class="container hero-content">
+        <div class="hero-text">
+          <h1>Construímos produtos digitais <span class="neon">impactantes</span> e escaláveis.</h1>
+          <p class="muted">Agência especializada em desenvolvimento web, design de interfaces e performance. Transformamos ideias em experiências memoráveis.</p>
+
+          <div class="hero-actions">
+            <a class="btn-primary glow" href="#contato">Começar Projeto</a>
+            <a class="btn-secondary" href="#servicos">Ver Serviços</a>
+          </div>
+        </div>
+
+        <div class="hero-card float reveal">
+          <div class="card-inner">
+            <h3>Pacote Startup</h3>
+            <p>Landing, identidade visual e dashboard inicial — pronto em 2 semanas.</p>
+            <div class="card-cta glow">A partir de <strong>R$ 3.500</strong></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ================= SERVIÇOS ================= -->
+    <section id="servicos" class="servicos container">
+      <h2 class="section-title reveal">Nossos Serviços</h2>
+
+<div class="grid-servicos">
+  <article class="servico frontend reveal">
+    <div class="icon">🖥️</div>
+    <h3>Desenvolvimento Front-End</h3>
+    <p>Interfaces modernas, responsivas e com foco em desempenho.</p>
+  </article>
+
+  <article class="servico sistemas reveal">
+    <div class="icon">⚙️</div>
+    <h3>Sistemas Web</h3>
+    <p>Aplicações escaláveis com arquitetura organizada e testes.</p>
+  </article>
+
+  <article class="servico uiux reveal">
+    <div class="icon">🎨</div>
+    <h3>UI / UX</h3>
+    <p>Design centrado no usuário, protótipos e validação de usabilidade.</p>
+  </article>
+</div>
+
+    </section>
+
+    <!-- ================= SOBRE ================= -->
+    <section id="sobre" class="sobre">
+      <div class="container sobre-grid">
+        <div class="sobre-text reveal">
+          <h2>Quem somos</h2>
+          <p class="muted">Somos uma equipe apaixonada por tecnologia e design. Entregamos produtos com qualidade técnica e estética.</p>
+          <ul>
+            <li>Projetos orientados a métricas</li>
+            <li>Código limpo e documentado</li>
+            <li>Design consistente e escalável</li>
+          </ul>
+        </div>
+
+        <div class="sobre-visual reveal">
+          <div class="mockup">
+  <div class="mockup-screen"><span>Dashboard</span></div>
+  <div class="mockup-glow glow" aria-hidden="true"></div>
+</div>
+
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ================= DEPOIMENTOS ================= -->
+    <section id="depoimentos" class="depoimentos container">
+      <h2 class="section-title reveal">Depoimentos</h2>
+
+      <div class="cards-depoimentos">
+        <blockquote class="depoimento reveal">
+          <p>"Equipe extremamente profissional e rápida! Superou todas as expectativas."</p>
+          <footer>— Marina Lopes, CEO @ Inova</footer>
+        </blockquote>
+
+        <blockquote class="depoimento reveal">
+          <p>"O design da nossa nova landing aumentou muito nossas conversões."</p>
+          <footer>— Rafael Costa, Produto @ StartX</footer>
+        </blockquote>
+      </div>
+    </section>
+
+    <!-- ================= CTA / CONTATO ================= -->
+    <section id="contato" class="cta reveal">
+      <div class="container cta-inner">
+        <h2>Pronto para construir algo juntos?</h2>
+        <p class="muted">Envie sua mensagem e retornaremos em até 48h.</p>
+
+        <form class="form-cta" action="#" onsubmit="handleForm(event)" novalidate>
+          <input type="text" name="nome" placeholder="Seu nome" required>
+          <input type="email" name="email" placeholder="Seu e-mail" required>
+          <textarea name="mensagem" rows="3" placeholder="Descreva seu projeto" required></textarea>
+
+          <button class="btn-primary" type="submit">Enviar</button>
+        </form>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- ================= FOOTER ================= -->
+  <footer class="footer">
+    <div class="container footer-grid">
+      <div>
+        <a class="logo" href="#">Neon<span>Craft</span></a>
+        <p class="muted">Agência de desenvolvimento web — foco em produto e resultado.</p>
+      </div>
+
+      <nav>
+        <ul>
+          <li><a href="#servicos">Serviços</a></li>
+          <li><a href="#sobre">Sobre</a></li>
+          <li><a href="#contato">Contato</a></li>
+        </ul>
+      </nav>
+    </div>
+
+    <div class="copyright">© <span id="ano"></span> - Desenvolvido por - Caio Oliveira. Todos os direitos reservados.</div>
+  </footer>
+
+  <!-- ================= SCRIPT ================= -->
+  <script src="script.js"></script>
+</body>
+</html>

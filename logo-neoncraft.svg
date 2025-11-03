@@ -1,0 +1,22 @@
+<svg width="260" height="70" viewBox="0 0 260 70" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="neon" x1="0" x2="1">
+      <stop offset="0%" stop-color="#00e5ff"/>
+      <stop offset="100%" stop-color="#7af5ff"/>
+    </linearGradient>
+    <style>
+      .text-white{fill:#FFFFFF;font-family:Inter, sans-serif;font-weight:800;font-size:32px}
+      .text-neon{fill:url(#neon);font-family:Inter, sans-serif;font-weight:800;font-size:32px}
+    </style>
+  </defs>
+
+  <rect x="0" y="0" width="260" height="70" rx="12" fill="#0b0b0d"/>
+
+  <text x="20" y="46" class="text-white">Neon</text>
+  <text x="112" y="46" class="text-neon">Craft</text>
+
+  <circle cx="235" cy="35" r="6" fill="url(#neon)">
+    <animate attributeName="r" values="5;9;5" dur="2.5s" repeatCount="indefinite"/>
+    <animate attributeName="opacity" values="0.6;1;0.6" dur="2.5s" repeatCount="indefinite"/>
+  </circle>
+</svg>
